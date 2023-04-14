@@ -1,0 +1,51 @@
+
+
+//CREATIONAL--it is mainly focused on creation of object
+     Singleton-- Used for facotry method like DB connection,object where same instance can be used.
+     Factory,Abstract Factory-- Use interfaces and dynamoic programming,Client do not have to create object it tells server to create.
+                               code is loose coupled.Easy to extend.E.g:Class,Drivermanafer,Calendar.
+     Builder--Stringbuilder,Stringbuffer,streambuilder
+     Prototype--it will create nw instance everytime by reusing the existing instance and update the fields that are needed.it mainly uses cloning.
+                this help in saving cost of object creation everytime.E.g:if you want to get data from DB many time and there are no or less updates. in spreadsheet copying cell does same thing
+                In some games, we want trees or buildings in the background. We may realize that we don't have to create new trees or buildings and render them on the screen every time the character moves.
+
+
+
+
+//STRUCTURAL--it tells once object is created how it should fucntion/Common way of combining object and classes
+              so they can be reused.inheritance.
+     Adapter--it is like mobile adapter where o/p is same only input source is changed.It act as  interface between 2 different and incompatibel object.
+              socket have 240v o/p while adapter have 3volt o/p.Here COMPOSITION is used to have this implemented
+              E.g: are Enumeration and Iterator. Arrays.asList().which means converting one form of data to another.
+     Bridge-- it is like bridge between multiple interface e.g: shape and colour are 2 diff interafces but shape can have colur. hence we use composition to implement this.
+     Decrorator
+     Facade--It is just like controller class we call one method and all othe process is taken by it only.u want to call db then u need
+            DB connection,code to add data to db ,process the data so insted calling all method seperately you can call one method and then method will do this pricessing.
+     Composite--It is composition of multipl object, e.g:headdeaprtment will have both sales and financial department object access and call its method.
+                here headdepartment also implements department class.
+     Proxy--it is like calling proxy class insted of actual class.Used for better security and only show specific implementaation
+            It also hide the implementation like actual business logic.It also help to load the complex connection detail etc once and next time use same object
+     Flyweight=--it is similar to caching where object if already exist it shared form memory and hence saving cost of object creation
+
+//BEHAVIOURAL--how will once class interact wit another class in lossed coupled way
+     Chain of responsibility->it is like passing responsibility from one class to another e.g: ATM dispenser.
+                             multiple catch block is like COR.Filterring also is COR.
+     Templete method-->it is process where there are common steps to be executed for multiple flow.E.g: for PED VISA and AMEX there are 2 try and live hence 4 flow.
+                we create abstract class with 4 method to call each process and for each process weh ave wpg and PR call as common hence it is made as a common call.
+     observer
+     strategy
+     Iterator
+
+
+
+
+
+
+
+
+
+Difference between all:
+Adapter adapts a given class/object to a new interface. In the case of the former, multiple inheritance is typically employed. In the latter case, the object is wrapped by a conforming adapter object and passed around. The problem we are solving here is that of non-compatible interfaces.
+Facade is more like a simple gateway to a complicated set of functionality. You make a black-box for your clients to worry less i.e. make interfaces simpler.
+Proxy provides the same interface as the proxied-for class and typically does some housekeeping stuff on its own. (So instead of making multiple copies of a heavy object X you make copies of a lightweight proxy P which in turn manages X and translates your calls as required.) You are solving the problem of the client from having to manage a heavy and/or complex object.
+Decorator is used to add more gunpowder to your objects (note the term objects -- you typically decorate objects dynamically at runtime). You do not hide/impair the existing interfaces of the object but simply extend it at runtime.

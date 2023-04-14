@@ -1,13 +1,12 @@
-package com.example._2023practice.Designpattern.singleton;
+package com.example._2023practice.Designpattern.CREATIONAL.singleton;
 
 import java.io.NotSerializableException;
 import java.io.Serializable;
-import java.lang.reflect.ReflectPermission;
 
 
 // private constructor.private static class object, static instance method
 //
-public class SingletonClass implements Serializable {
+public class SingletonClass implements Serializable,Cloneable {
 
     private static SingletonClass classObj;
 
@@ -34,6 +33,7 @@ public class SingletonClass implements Serializable {
         }
     }
 
+
     @Override
     protected Object clone() throws CloneNotSupportedException {
         throw new CloneNotSupportedException("Vishal Exception");
@@ -47,13 +47,14 @@ public class SingletonClass implements Serializable {
     }
 
 
-    public Object readObject() throws NotSerializableException {
-        throw new NotSerializableException("non serializable");
+    public Object readObject() throws NotSerializableException, InterruptedException {
+    return getSingleTonInstance();//here why we throw exception we can still call method
+    //    throw new NotSerializableException("non serializable");
     }
 
-    public void writeObject(Object obj) throws NotSerializableException {
+    /*public void writeObject(Object obj) throws NotSerializableException {
         throw new NotSerializableException("non serializable");
-    }
+    }*/
 
 
 }

@@ -1,11 +1,10 @@
-package com.example._2023practice.Designpattern.singleton;
+package com.example._2023practice.Designpattern.CREATIONAL.singleton;
 
 import java.io.NotSerializableException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
 
 public class SingletonMain {
 
@@ -36,7 +35,7 @@ public class SingletonMain {
 
 
 
-        Class c = Class.forName("com.example._2023practice.Designpattern.singleton.SingletonClass");
+        Class c = Class.forName("com.example._2023practice.Designpattern.CREATIONAL.singleton.SingletonClass");
         Constructor[] consts = c.getDeclaredConstructors();
         System.out.println(consts);
         for (Constructor co :

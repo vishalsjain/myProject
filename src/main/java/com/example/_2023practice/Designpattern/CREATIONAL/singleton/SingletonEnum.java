@@ -1,4 +1,4 @@
-package com.example._2023practice.Designpattern.singleton;
+package com.example._2023practice.Designpattern.CREATIONAL.singleton;
 
 public enum  SingletonEnum {
 
