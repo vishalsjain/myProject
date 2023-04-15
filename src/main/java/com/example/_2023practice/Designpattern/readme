@@ -32,8 +32,8 @@
                              multiple catch block is like COR.Filterring also is COR.
      Templete method-->it is process where there are common steps to be executed for multiple flow.E.g: for PED VISA and AMEX there are 2 try and live hence 4 flow.
                 we create abstract class with 4 method to call each process and for each process weh ave wpg and PR call as common hence it is made as a common call.
-     observer
-     strategy
+     observer--Spring Events or Kafka or youtube is e.g:
+     strategy--It is like lambda. where function to execuet to be decided at runtime.e.g:Collections.sort or any JAVA8.
      Iterator
 
 
