@@ -1,9 +1,6 @@
 package com.example._2023practice.common.java8;
 
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class MainClassStrea {
@@ -42,11 +39,28 @@ public class MainClassStrea {
         System.out.println(hm2);
 
 
+        System.out.println("--Duplicate in array--");
+        Integer[] a={1,2,3,2,1,5};
+        Arrays.stream(a).collect(Collectors.groupingBy(o -> o,
+                Collectors.counting()))
+                .entrySet().stream().filter(a1->a1.getValue()>1)
+                .map(Map.Entry::getKey)
+                .forEach(( aLong) -> System.out.println(aLong))
+                ;
+
+        System.out.println("--First first and last highest--");
+        IntSummaryStatistics sumsta=Arrays.stream(a).mapToInt(Integer::intValue).summaryStatistics();
+        System.out.println("min:"+sumsta.getMin()+":max:"+sumsta.getMax());
 
 
+        System.out.println("--Find Common betwen 2 array--");
+        Integer[] int1={1,2,3,4,5,6};
+        Integer[] int2={6,2,1,8,9};
+        List<Integer> lInt=new ArrayList<>(List.of(int2));
 
-
-
+        Arrays.stream(int1).filter(x->{
+            if(lInt.contains(x)) return true; else return false;
+        }).forEach(System.out::println);
 
 
 
