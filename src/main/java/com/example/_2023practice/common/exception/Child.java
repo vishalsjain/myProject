@@ -15,12 +15,13 @@ public class Child extends Parent{
         System.out.println("child getName1");
     }
 
-    public void getName1Compile() //throws Exception {  //if parent have IO then child cannot have Exception
+    public void getName1Compile() //throws Exception {  //if child have exception then parent cannot have IO restricted
     throws IOException{
         System.out.println("Parent getName1Compile");
     }
 
     public void getName1Runtime() throws RuntimeException{
+
         System.out.println("Child getName1Runtime");
     }
 }

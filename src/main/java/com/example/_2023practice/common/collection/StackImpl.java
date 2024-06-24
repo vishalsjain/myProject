@@ -1,5 +1,7 @@
 package com.example._2023practice.common.collection;
 
+import java.util.Stack;
+
 public class StackImpl {
 
     int[] arrayInt;

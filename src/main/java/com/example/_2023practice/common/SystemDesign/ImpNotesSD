@@ -1,0 +1,12 @@
+1.Scale your service first vertically and then when you have goos business scale horizontally.
+2.Preprocessing/Cache-->Have data of work store in cache to that you can reuse
+3.Resilient-->to avoid sigle point of failure and have backup of your work
+4.Load balance->send request to the required service only if they can take that load,
+              also balancing can be done on some logic
+5.Microserviec arch--> define your servie based on feature of business usecase.
+6.Distributed system--> it is similar to have replica of you complete service ecosystem and use in case there is total failure of your master service,
+           or if you want to route load based on location of request that have come etc.
+7.Logging and metrics.
+8.Decoupling--> it is like one service should have its business logic and other service should not rely on what that business logic is.
+    We should know what we do should not interfere other work.
+

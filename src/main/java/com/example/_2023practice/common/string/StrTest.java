@@ -8,7 +8,7 @@ public class StrTest {
 
         String s=new String ("asdaad qdqd   qweqw");
 
-        final String[] c = {null};
+         final String[] c = {null};
         Arrays.stream(s.replaceAll("\\s","").split(""))
                 .filter(a->{
                     if(c[0] ==null || c[0] ==a ){

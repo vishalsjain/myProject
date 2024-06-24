@@ -6,5 +6,6 @@ public class ProxyMain {
         ExpensiveObject object = new ExpensiveObjectProxy();
         object.process();
         object.process();
+
     }
 }

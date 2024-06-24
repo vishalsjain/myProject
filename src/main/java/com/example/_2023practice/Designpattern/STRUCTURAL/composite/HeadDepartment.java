@@ -46,7 +46,7 @@ public class HeadDepartment implements Department {
     }
 
     public void printDepartmentName() {
-        childDepartments.forEach(Department::printDepartmentName);
+        childDepartments.forEach(s->s.printDepartmentName());
     }
 
     public void addDepartment(Department department) {

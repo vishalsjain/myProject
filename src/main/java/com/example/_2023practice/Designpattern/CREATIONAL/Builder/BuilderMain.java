@@ -14,7 +14,8 @@ public class BuilderMain {
         System.out.println(        lp1.setGraphic().build());
 
 
-        Stream.Builder<com.example._2023practice.Designpattern.CREATIONAL.Factory.Laptop> builder=  Stream.builder();
+        Stream.Builder<com.example._2023practice.Designpattern.CREATIONAL.Factory.Laptop> builder
+                =  Stream.builder();
         builder.add(new Laptop("1","2","2",true,true));
         Stream s=builder.build();
         s.forEach(s1-> System.out.println(s1));

@@ -1,0 +1,24 @@
+1. When to use interface and when to use composition 
+2. Asynchronous, concurrent and parallel in multithrading 
+3. How concurrency can be achieved 
+4. Executor thread framework 
+5. Current project architecture 
+6. Why to go for microservices 
+7. Different tokens apart from rest api 
+8. Use and implementation of generics
+9. Oops concepts
+[6/22, 12:47 PM] Maithili Kulkarni: 10. CompatibleFuture in multithrading
+[6/22, 12:47 PM] Maithili Kulkarni: To do-
+1. Pagination in rest api
+2. Different ways to achieve rest authentication
+[6/22, 12:48 PM] Maithili Kulkarni: 1. Spring boot application has two different database configured. How to connect to particular using jdbctemplate
+2. Parallel stream in Java 8
+3. How to use third party jar and call it's class in spring boot
+4. One thread is executing SQL query and after 5 mins you need to stop the query execution of response is not retrieved
+5. Microservices healing
+6. Microservices resialance 
+7. Checking header in rest api
+8. 3 different microservices are pointing to 3 different dB. How to handle if second service gets failed then first txn also should get rolledback
+9. How to separate property file from war file
+10. If 10000 api requests are coming to your application but application is able to handle only 5000 ..how to handle 
+11. If there are 10 different IBM MQ then how to process messages in order

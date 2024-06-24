@@ -9,7 +9,8 @@ public class Parent {
         System.out.println("Parent");
     }
 
-    public void getName1() throws IOException {
+    public void getName1() throws IOException
+     {
         System.out.println("Parent getName1");
     }
 
@@ -18,6 +19,7 @@ public class Parent {
         System.out.println("Parent getName1Compile");
     }
     public void getName1Runtime() throws NullPointerException {
+        //throws RuntimeException{
         System.out.println("Parent getName1Runtime");
     }
 

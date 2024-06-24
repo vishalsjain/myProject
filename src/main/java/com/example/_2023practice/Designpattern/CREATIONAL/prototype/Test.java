@@ -25,11 +25,11 @@ public class Test {
 				updatedStudentList.add(student);
 
 				System.out.println("Original Student List::");
-				allStudents.forEach(System.out::println);
+				allStudents.forEach(a-> System.out.println(a.hashCode() +":id:"+a.getId()));
 				System.out.println(allStudents.hashCode());
 
 				System.out.println("Updated Student List::");
-				updatedStudentList.forEach(System.out::println);
+		updatedStudentList.forEach(a-> System.out.println(a.hashCode()+":id:"+a.getId()));
 				System.out.println(updatedStudentList.hashCode());
 			}
 		}

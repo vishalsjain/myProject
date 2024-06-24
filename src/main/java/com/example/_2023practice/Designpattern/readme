@@ -22,17 +22,18 @@
      Facade--It is just like controller class we call one method and all othe process is taken by it only.u want to call db then u need
             DB connection,code to add data to db ,process the data so insted calling all method seperately you can call one method and then method will do this pricessing.
      Composite--It is composition of multipl object, e.g:headdeaprtment will have both sales and financial department object access and call its method.
-                here headdepartment also implements department class.
+                here headdepartment also implements department class.It halp to define hirerachy.
      Proxy--it is like calling proxy class insted of actual class.Used for better security and only show specific implementaation
             It also hide the implementation like actual business logic.It also help to load the complex connection detail etc once and next time use same object
      Flyweight=--it is similar to caching where object if already exist it shared form memory and hence saving cost of object creation
 
 //BEHAVIOURAL--how will once class interact wit another class in lossed coupled way
      Chain of responsibility->it is like passing responsibility from one class to another e.g: ATM dispenser.
-                             multiple catch block is like COR.Filterring also is COR.
+                                multiple catch block is like COR.Filterring also is COR.
      Templete method-->it is process where there are common steps to be executed for multiple flow.E.g: for PED VISA and AMEX there are 2 try and live hence 4 flow.
                 we create abstract class with 4 method to call each process and for each process weh ave wpg and PR call as common hence it is made as a common call.
      observer--Spring Events or Kafka or youtube is e.g:
+     
      strategy--It is like lambda. where function to execuet to be decided at runtime.e.g:Collections.sort or any JAVA8.
      Iterator
 

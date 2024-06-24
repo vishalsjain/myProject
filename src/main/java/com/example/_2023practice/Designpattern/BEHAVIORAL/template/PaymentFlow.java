@@ -15,7 +15,7 @@ public abstract class PaymentFlow {
      abstract  void callLiveFlow() ;
 
     public final  void callTryFlow() {
-        System.out.println("Call Try flow");
+        System.out.println("Call Try flow from PaymentFlow");
     }
 
 

@@ -15,7 +15,7 @@ public class SharedObject {
                 System.out.println("Waiting"+Thread.currentThread().getName());
                 status=true;
                 wait();
-                Thread.sleep(10000);//if this sleep is commented then we wil not understand execution better
+                Thread.sleep(100);//if this sleep is commented then we wil not understand execution better
             }
             System.out.println("Outside wait");
         }
@@ -33,9 +33,9 @@ public class SharedObject {
                 notify();
 
                 System.out.println("Notified" + Thread.currentThread().getName());
-
+            Thread.sleep(10000);
             }
-            System.out.println("Outside loop"+status);
+            System.out.println("Outside setdata loop"+status);
         }
     }
 }

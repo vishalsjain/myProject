@@ -34,9 +34,10 @@ public boolean iscyle(){
         Node slowRef=head;
         Node fastRef=head;
 
-        while((slowRef!=null && fastRef!=null && fastRef.nextnode!=null)){
-            fastRef.nextnode=fastRef.nextnode.nextnode;
-            slowRef.nextnode=slowRef.nextnode;
+        while((slowRef!=null && fastRef!=null && fastRef.nextnode!=null &&
+                fastRef.nextnode.nextnode!=null && slowRef.nextnode!=null)){
+            fastRef=fastRef.nextnode.nextnode;
+            slowRef=slowRef.nextnode;
 
             if(fastRef==slowRef)return true;
         }

@@ -22,6 +22,7 @@ public class ComputerFactory {
 			return new Laptop(ram, hdd, cpu, isGraphicsEnabled, isBluetoothEnabled);
 		default:
 			throw new RuntimeException("Invalid Computer Type!!");
+
 		}
 	}
 }

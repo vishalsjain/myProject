@@ -1,6 +1,7 @@
 package com.example._2023practice.common.string;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Anagram {
 
@@ -8,6 +9,8 @@ public class Anagram {
 
         String s="abcd";
         String s1="dcba";
+
+        System.out.println(s.toCharArray().toString());
         checkAnagram(s,s1);
         System.out.println("--");
         checkAnagram(s,null);
@@ -30,6 +33,7 @@ public class Anagram {
             System.out.println("Not Anagram");
         return ;
         }
+
         char[] a1=s.toCharArray();
         char[] b1=s1.toCharArray();
         Arrays.sort(a1);
