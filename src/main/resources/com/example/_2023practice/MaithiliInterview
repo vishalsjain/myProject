@@ -1,24 +1,97 @@
-1. When to use interface and when to use composition 
-2. Asynchronous, concurrent and parallel in multithrading 
+1. When to use interface and when to use composition
+  Interface is like inheritance IS A, while composition is HAS a using class inside another class
+2. Asynchronous, concurrent and parallel in multithrading
+         Async means like kafka, concurrent is like execution in parallel. however if its single core cpu
+         then request get executed one at a time but processor is smart enough to run one request then hold and run second.
+         while in parallel multiple request work in parallel and its achieved in multiple core CPU only.
 3. How concurrency can be achieved 
 4. Executor thread framework 
 5. Current project architecture 
 6. Why to go for microservices 
-7. Different tokens apart from rest api 
+7. Different tokens apart from rest api    *****
+   Basic Auth(Authorization:Basic), JWT token(Authorization:Bearer),Oauth
+2. Different ways to achieve rest authentication ***
 8. Use and implementation of generics
+   Used to make code more generic and easy readble and support multiple data type.
+   T U V is more strict and ? is less strict.
+   swap(List<T> list1, int index1, List<T> list2, int index2) so both list have to be same type.
+   but if it was ? then it can be of any type and might fail in code
 9. Oops concepts
-[6/22, 12:47 PM] Maithili Kulkarni: 10. CompatibleFuture in multithrading
-[6/22, 12:47 PM] Maithili Kulkarni: To do-
+10. CompatibleFuture in multithrading
+
 1. Pagination in rest api
-2. Different ways to achieve rest authentication
-[6/22, 12:48 PM] Maithili Kulkarni: 1. Spring boot application has two different database configured. How to connect to particular using jdbctemplate
+       reporsitory extends PagingAndSortingRepository and we can pass pageable object, and it return Page<Anyobject>
+
+1. Spring boot application has two different database configured. How to connect to particular using jdbctemplate
+   create Datasource object with 2 configuration and assign to different jdbc templates.
 2. Parallel stream in Java 8
+   it helps to achieve functional programming.it represnets a pipeline though which data will flow.
+   Parallelstream achieve processing of record in small chunk using all the core of CPU. it uses fork join to achieve this.
+   main stream is divided into small thread and at end it wait for all to complete and combine result.
 3. How to use third party jar and call it's class in spring boot
+
 4. One thread is executing SQL query and after 5 mins you need to stop the query execution of response is not retrieved
+  Create Callable instance of your thread. and there it return future object. do future.get(waittime) ti will throw exception after that time.
+  and after that do future.cancel() to cancel the thread execution.TimeourException
 5. Microservices healing
-6. Microservices resialance 
+6. Microservices resialance
+  resiliance tell how Microservice will help to handle failure. like we connect to downstream to get some data,
+  but if it fail with 5XX how do we handle e.g: using circuit breaker, retry pattern.@EnableRetry,@Retryable,@backoff
+
 7. Checking header in rest api
+   using HttpRequest object we can get header detail.
 8. 3 different microservices are pointing to 3 different dB. How to handle if second service gets failed then first txn also should get rolledback
+           We can use SAGA pattern.
 9. How to separate property file from war file
-10. If 10000 api requests are coming to your application but application is able to handle only 5000 ..how to handle 
+10. If 10000 api requests are coming to your application but application is able to handle only 5000 ..how to handle
+ vertical scaling horizontal scalling, aws cloudwatch alarm. use resilience or use caching with api gateway.
 11. If there are 10 different IBM MQ then how to process messages in order
+   we can set the groupid to the message and in consumer read messaage and process it only when we have same groupid, if not dont acknowlege the message
+   MQ work on principle of ack if its not received message still remain in queue.
+
+How to create REPO and get data.
+ Create Entity class with @entity and then create interface @repository and do extend JPArepository<Entityclass>. you can use this repo for to get data form DB
+but even jpa repositroy is interface class. so implementaion of JPArepository is SimpleJPArepositry which have all method like
+save,find,delete which have actual implementation
+
+
+1.how to sort aary3 when there is value in array1 and array2
+2.how to flatten array
+3.how to check if number is prime or not for array and arraylist
+4.Spring Security
+5.Caching
+
+
+3.Select max salary of employee departmenr wise.
+ SELECT e.*
+ FROM employees e
+ JOIN (
+    SELECT department_id, MAX(salary) as max_salary
+    FROM employees
+    GROUP BY department_id
+  ) dept_max ON e.department_id = dept_max.department_id AND e.salary = dept_max.max_salary;
+
+4.Can we have static block synchronised
+  Yes we can do that when it been called multipel time or loaded multiple times from multiple threads.
+   public static synchronized Singleton getInstance() {
+          if (instance == null) {
+              instance = new Singleton();
+          }
+          return instance;
+      }
+5.what is priority of main thread
+  it is 5 which is normal priority.
+6.Predicate function to delete element from arraylist ,it will throw concurrent exception except.
+   it will throw concurenct exception however you can use removeif condition
+    list.removeIf(predicate); but still if you use within streams it will throw exception.
+7.How to handle large file in spring boot.
+  Spring have its own multipartresolver to read the multipart file. but if we have very big file then we can implement our
+  own multipartresolve bean and update app.pro file to set as false.  also along with this we can use bufferinputreader which actually
+  will read chuk of data and do processing. multipartfile is used in controller to get file detail.
+8. ORM VS JPA vs Hibernate
+ ORM is object relation mapping, it is concept to convert data from object to relational DB.
+ hibernate is the actual implementation of ORM concept.
+ JPA works above ORM and it is a layer which actually help connect hibernate to DB. JPA provides specification and flexibility to use
+ hibernate or any other ORM tool. jpa is java persistent api.
+  ORM--JPA--Hibernate     so basicially we cannot use JPA as it is specificaiton we need to use tool like hibernate or spring to use orm framework
+     --JPA--Spring Data JPA

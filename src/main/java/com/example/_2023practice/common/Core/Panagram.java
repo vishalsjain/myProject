@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-public class Panagram {
+public class   Panagram {
     //it means it contain all a-z atleast once
     public static void main(String[] args) {
 

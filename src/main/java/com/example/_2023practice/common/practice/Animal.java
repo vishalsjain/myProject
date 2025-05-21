@@ -2,7 +2,7 @@ package com.example._2023practice.common.practice
         ;
 
 public class Animal
-{
+{  //it is not static hence it will be called only when object is created
     {
     System.out.println("hgjhghj");
     }

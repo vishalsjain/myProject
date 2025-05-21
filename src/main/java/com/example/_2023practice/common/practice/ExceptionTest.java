@@ -19,14 +19,14 @@ ExceptionTest et=new ExceptionTest();
   {
    int i=6;
    try{
-    if(i==6) new NullPointerException();
+    if(i==6) throw new NullPointerException();
     return i;
    }
    catch(NullPointerException e)
    {
     i=10;
        System.out.println("NPE");
-      // return i;
+       return i;
 
     //throw e;
    }
@@ -34,7 +34,7 @@ ExceptionTest et=new ExceptionTest();
    {
     i=20;
     System.out.println("In finally block");
-    return i;
+   // return i;   //if we comment this and catch have return then that value is returned.
     //   throw new NullPointerException();
    }   
   }

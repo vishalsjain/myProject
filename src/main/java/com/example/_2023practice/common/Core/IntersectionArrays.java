@@ -11,7 +11,7 @@ public class IntersectionArrays {
 //get all common between 2 arrays
         int[] a = {1, 2, 3, 4, 5, 5};
         int[] b = {6, 7, 3, 4, 5};
-        Arrays.stream(a).boxed().distinct().
+        Arrays.stream(a).distinct().
                 filter(x -> Arrays.stream(b).boxed()
                         .collect(Collectors.toSet()).contains(x))
                 .forEach(System.out::println);

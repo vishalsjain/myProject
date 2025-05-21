@@ -4,7 +4,9 @@ public class MySingleton {
     private static MySingleton instance;
 
     MySingleton() {
-        System.out.println("Singleton");
+        System.out.println(
+                "Singleton");
+
 
         // Private constructor to prevent external instantiation
     }

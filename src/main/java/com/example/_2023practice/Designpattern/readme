@@ -35,6 +35,8 @@
      observer--Spring Events or Kafka or youtube is e.g:
      
      strategy--It is like lambda. where function to execuet to be decided at runtime.e.g:Collections.sort or any JAVA8.
+
+
      Iterator
 
 

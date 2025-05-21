@@ -1,3 +1,4 @@
+
 package com.example._2023practice.common.Core;
 
 import java.util.Arrays;
@@ -12,7 +13,9 @@ public class DuplicateString {
     public static void main(String[] args) {
         String checkDuplicate = "vishaljain";
         char[] c = checkDuplicate.toCharArray();
-
+        Arrays.stream(checkDuplicate.split(""))
+                .collect(Collectors.toCollection(LinkedHashSet::new))
+                .forEach(System.out::println);
         LinkedHashSet<String> hs = new LinkedHashSet();
         for (int i = 0; i < c.length; i++) {
             hs.add(String.valueOf(c[i]));

@@ -2,6 +2,7 @@ package com.example._2023practice.common.Core;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -26,5 +27,13 @@ public class StringCompression {
                 .collect(Collectors.mapping(stringLongEntry -> stringLongEntry.getKey()+stringLongEntry.getValue(), Collectors.joining()))
                 ;
         System.out.println(collect);
+
+
+        List<String> collect1 = Arrays.stream(s.split(""))
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                .entrySet().stream()
+                .collect(Collectors.mapping(stringLongEntry ->
+                        stringLongEntry.getKey() + stringLongEntry.getValue(), Collectors.toList()));
+        System.out.println(collect1);
     }
 }

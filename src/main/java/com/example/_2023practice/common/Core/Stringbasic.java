@@ -51,7 +51,6 @@ public class Stringbasic {
 
             System.out.println(        Arrays.stream(text.split("")).
         filter(a->"aeiouAEIOU".contains(a)).count());
-
             return text.chars()
                     .mapToObj(c -> (char) c)
                     .filter(c -> "AEIOUaeiou".contains(String.valueOf(c)))

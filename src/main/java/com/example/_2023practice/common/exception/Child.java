@@ -10,6 +10,7 @@ public class Child extends Parent{
     }
 
     //if parent do not throw then it give compile time exception
+    //and vice versa is ok like parent thors but child dont throw do no copile excdption
     public void getName1() throws IOException
     {
         System.out.println("child getName1");

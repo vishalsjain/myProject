@@ -12,6 +12,7 @@ public class DeleteArray {
         Integer deleteElem=3;
         int[] newArray=new int[originalA.length-1];
 int index=0;
+
         System.out.println("old Array:"+Arrays.toString(originalA));
         for(int i=0;i<=originalA.length-1;i++){
             if(originalA[i]!=deleteElem){

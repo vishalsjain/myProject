@@ -23,12 +23,13 @@ public class TreeSetMain {
   countryTreeSet.add(bhutanCountry);
   countryTreeSet.add(indiaCountry2);
   countryTreeSet.add(nepalCountry2);
- 
+  System.out.println(indiaCountry.hashCode());
+  System.out.println(indiaCountry2.hashCode());
   Iterator counIter=countryTreeSet.iterator(); // put debug point here
   while(counIter.hasNext())
   {
    CountryCOmparable c= (CountryCOmparable) counIter.next();
-   System.out.println(c.getCountryName());
+   System.out.println(c.getCountryName()+":hashcode+"+c.hashCode());
   }
  }
  

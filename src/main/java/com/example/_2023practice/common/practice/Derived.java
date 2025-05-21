@@ -12,12 +12,12 @@ public class Derived extends Base
     }
     protected final void getInfo()
     {  
-        System.out.println("method of Derived class");  
+        System.out.println("method of Derived class");//
     }  
     public static void main(String[] args)  
     {  
         Derived obj = new Derived();
-      obj.getInfo();
+      obj.getInfo();//this gets called becuase its same class hence even if its private it will call that method
 
 
         Base obj1 = new Base();

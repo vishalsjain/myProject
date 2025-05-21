@@ -42,13 +42,15 @@ class Name {
     //hence when contains is called since hashcode is not same it do not call equals method
     public static void main(String[] args) {
         Set<Name> names = new HashSet<>();
-        names.add(new Name("Tom", "Smith"));
+        Name n=new Name("Tom", "Smith");
+        names.add(n);
         System.out.println(new Name("Tom", "Smith").hashCode());
         System.out.println(new Name("Tom", "Smith").hashCode());
 
         System.out.println(
                 names.contains(new Name("Tom", "Smith"))
         );
+        System.out.println(names.contains(n));
 names.add(new Name("Tom", "Smith"));
 names.stream().forEach(name -> System.out.println(name.toString()));
 
@@ -74,11 +76,15 @@ method(o);
         String s4=new String("hello");
         String s5="hello";
         System.out.println(s1==s2);//false
-        System.out.println(s2==s3);//true
+        System.out.println(s2==s3);//true becuase it check heap but still check pool memory
         System.out.println(s1==s3);//false
         System.out.println(s1==s4);//false
         System.out.println(s2==s5);//true
-
+        System.out.println(s1.hashCode()==s2.hashCode());
+        System.out.println(s1.hashCode()==s3.hashCode());
+        System.out.println(s1.hashCode()==s4.hashCode());
+        System.out.println(s1.hashCode()==s2.hashCode());
+        System.out.println(s1.hashCode()==s5.hashCode());
 
 
     }

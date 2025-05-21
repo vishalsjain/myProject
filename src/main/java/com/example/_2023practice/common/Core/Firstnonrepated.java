@@ -13,7 +13,9 @@ public class Firstnonrepated {
 
         String x = Arrays.stream(s.split(""))
                 .filter(a ->
-                        !hs.add(a)).limit(1).collect(Collectors.joining());
+                        !hs.add(a)).peek(
+                                s1-> System.out.println(s1)
+                ).collect(Collectors.joining());
         System.out.println(x);
         System.out.println(hs);
 
